@@ -38,11 +38,11 @@ class Board extends React.Component {
   }
   getIndexes(board){
     let indexes = [];
-    for(let i=0; i<board.length; i++){
-      if(board[i] === 'C'){
-        indexes.push(i);
+    board.filter((element, index)=>{
+      if(element === 'C'){
+        indexes.push(index);
       }
-    }
+    });
     return indexes;
   }
   handleClick(i){
